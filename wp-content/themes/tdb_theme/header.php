@@ -50,10 +50,6 @@
 					<div class="four columns">
 						<h4>Mobile: 07612995634</h4>
 					</div>
-					<div class="four columns omega">
-
-					<div class="facebook_icon">f<a href="https://www.facebook.com/pages/TDB-Builders/1453216311615213?sk=info&tab=overview"><h5>Like us on Facebook</h5></a></div>
-					</div>
 				</div>
 				</div>
 
