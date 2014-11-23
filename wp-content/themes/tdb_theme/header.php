@@ -41,16 +41,32 @@
 		<div class="band navigation">
 			<h1 class="header-logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 			<nav class="container primary">
+
+				<div class="twelve columns">
+				<div class="contact details">
+					<div class="four columns alpha">	
+						<h4>Landline: 01773 302222</h4>
+					</div>
+					<div class="four columns">
+						<h4>Mobile: 07612995634</h4>
+					</div>
+					<div class="four columns omega">
+
+					<div class="facebook_icon">f<a href="https://www.facebook.com/pages/TDB-Builders/1453216311615213?sk=info&tab=overview"><h5>Like us on Facebook</h5></a></div>
+					</div>
+				</div>
+				</div>
+
 			<?php wp_nav_menu(  
 				array(  
 					'menu' 				=> 'Primary Navigation',
 					'container'       	=> 'div',
-					'container_class' 	=> 'twelve columns alpha',
+					'container_class' 	=> 'fourteen columns alpha',
 				   'container_id'       => 'navigation'	
 				)  
 			); ?>
 
-
+<!--
 			<div class="four columns omega">
 				<div class="contact details">
 					<div class="telephone_icon"></div><h5>01773 302222</h5>
@@ -60,7 +76,7 @@
 				<div class="contact details">
 					<div class="facebook_icon">f<a href="https://www.facebook.com/pages/TDB-Builders/1453216311615213?sk=info&tab=overview"><h5>Like us on Facebook</h5></a></div>
 				</div>
-			</div>
+			</div> -->
 
 
 			</nav><!--end container-->
