@@ -1,0 +1,150 @@
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP1 START @ 12:55:21
+NOTICE: Do NOT post to public sites or forums
+********************************************************************************
+VERSION:	0.5.8
+PHP:		5.5.14 | SAPI: apache2handler
+SERVER:		Apache/2.2.26 (Unix) mod_fastcgi/2.4.6 mod_wsgi/3.4 Python/2.7.6 PHP/5.5.14 mod_ssl/2.2.26 OpenSSL/0.9.8za DAV/2 mod_perl/2.0.8 Perl/v5.18.2
+DOC ROOT:	/Users/callum/Development Projects/Websites/tdb-builders
+DOC ROOT 755:	true
+LOG FILE 644:	true
+BUILD NAME:	20141103_tdbbuilders_54710e5f51f568772141122222951
+REQUEST URL:	http://localhost/tdb-builders/installer.php
+
+********************************************************************************
+ARCHIVE SETUP
+********************************************************************************
+NAME:	20141103_tdbbuilders_54710e5f51f568772141122222951_archive.zip
+SIZE:	30.88MB
+ZIP:	Enabled (ZipArchive Support)
+EXTRACTING
+ZipArchive Object
+(
+    [status] => 0
+    [statusSys] => 0
+    [numFiles] => 0
+    [filename] => 
+    [comment] => 
+)
+COMPLETE: true
+
+WEB SERVER CONFIGURATION FILE RESET:
+- Backup of .htaccess/web.config made to .orig
+- Reset of .htaccess/web.config files
+
+UPDATED FILES:
+- SQL FILE:  '/Users/callum/Development Projects/Websites/tdb-builders/installer-data.sql'
+- WP-CONFIG: '/Users/callum/Development Projects/Websites/tdb-builders/wp-config.php'
+
+ARCHIVE RUNTIME: 1.5158 sec.
+
+
+********************************************************************************
+DATABASE-ROUTINES
+********************************************************************************
+--------------------------------------
+SERVER ENVIROMENT
+--------------------------------------
+MYSQL VERSION:	5.5.38
+TIMEOUT:	5000
+MAXPACK:	1048576
+--------------------------------------
+DATABASE RESULTS
+--------------------------------------
+ERRORS FOUND:	0
+DROP TABLE:	removed (21) tables
+QUERIES RAN:	848
+
+wp_commentmeta: (0)
+wp_comments: (2)
+wp_duplicator_packages: (3)
+wp_hdflvvideoshare: (1)
+wp_hdflvvideoshare_med2play: (19)
+wp_hdflvvideoshare_playlist: (1)
+wp_hdflvvideoshare_settings: (1)
+wp_hdflvvideoshare_tags: (0)
+wp_hdflvvideoshare_vgads: (0)
+wp_hdflvvideoshare_vgoogleadsense: (0)
+wp_links: (0)
+wp_options: (283)
+wp_postmeta: (320)
+wp_posts: (106)
+wp_srzfb_albums: (1)
+wp_srzfb_galleries: (0)
+wp_term_relationships: (16)
+wp_term_taxonomy: (18)
+wp_terms: (18)
+wp_usermeta: (34)
+wp_users: (2)
+Removed '79' cache/transient rows
+
+SECTION RUNTIME: 0.3318 sec.
+
+********************************************************************************
+STEP1 COMPLETE @ 12:55:23 - TOTAL RUNTIME: 1.9017 sec.
+********************************************************************************
+
+
+
+********************************************************************************
+DUPLICATOR INSTALL-LOG
+STEP2 START @ 12:58:59
+NOTICE: Do not post to public sites or forums
+********************************************************************************
+CHARSET SERVER:	latin1
+CHARSET CLIENT:	 utf8 
+
+--------------------------------------
+SERIALIZER ENGINE
+[*] scan every column
+[~] scan only text columns
+[^] no searchable columns
+--------------------------------------
+wp_commentmeta^ (0)
+wp_comments~ (2)
+wp_duplicator_packages^ (0)
+wp_hdflvvideoshare~ (1)
+wp_hdflvvideoshare_med2play~ (19)
+wp_hdflvvideoshare_playlist~ (1)
+wp_hdflvvideoshare_settings~ (1)
+wp_hdflvvideoshare_tags^ (0)
+wp_hdflvvideoshare_vgads^ (0)
+wp_hdflvvideoshare_vgoogleadsense^ (0)
+wp_links^ (0)
+wp_options~ (209)
+wp_postmeta~ (320)
+wp_posts~ (106)
+wp_srzfb_albums~ (1)
+wp_srzfb_galleries^ (0)
+wp_term_relationships~ (16)
+wp_term_taxonomy~ (18)
+wp_terms~ (18)
+wp_usermeta~ (34)
+wp_users~ (2)
+--------------------------------------
+SEARCH1:	'http://localhost:8888/wordpress' 
+REPLACE1:	'http://localhost:8888/tdb-builders' 
+SEARCH2:	'/Users/callum/Development Projects/Websites/wordpress/' 
+REPLACE2:	'/Users/callum/Development Projects/Websites/tdb-builders/' 
+SCANNED:	Tables:21 | Rows:748 | Cells:5191 
+UPDATED:	Tables:1 | Rows:108 |Cells:111 
+ERRORS:		0 
+RUNTIME:	0.286600 sec
+
+********************************************************************************
+START FINAL CLEANUP: 12:59:00
+********************************************************************************
+UPDATE `wp_blogs` SET domain = 'localhost' WHERE domain = 'localhost'
+
+--------------------------------------
+WARNINGS
+--------------------------------------
+No Warnings Found
+
+
+WEB SERVER CONFIGURATION FILE BASIC SETUP:
+created basic .htaccess file.  If using IIS web.config this process will need to be done manually.
+********************************************************************************
+STEP 2 COMPLETE @ 12:59:00 - TOTAL RUNTIME: 0.2933 sec.
+********************************************************************************

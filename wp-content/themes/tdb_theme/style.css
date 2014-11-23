@@ -1,0 +1,16 @@
+/*
+Theme Name: Magazine
+Theme URI: http://enva.to/IW4wFi
+Author: Mahdi El Hanafi and Ian Yates
+Author URI: http://enva.to/IW4wFi
+Description: Magazine is a WordPress theme based on the Skeleton framework, lovingly designed and built by the good folk at Webdesigntuts+
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: adaptive, skeleton, magazine
+Text Domain: magazine
+*/
+
+@import url("stylesheets/skeleton.css");
+@import url("stylesheets/base.css");
+@import url("stylesheets/layout.css");
