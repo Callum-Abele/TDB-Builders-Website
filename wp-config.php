@@ -14,19 +14,25 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'tdbbu158_tdbbuilders');
+if(file_exists(dirname(__FILE__) . '/local-config.php')) {
 
-/** MySQL database username */
-define('DB_USER', 'tdbbu158_master');
+	define('WP_LOCAL_DEV',true);
+	include( dirname(__FILE__) . '/local-config.php');
+}
+else {
 
-/** MySQL database password */
-define('DB_PASSWORD', '.Xy4y3_6Wq4[D@QoA@');
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'tdbbu158_tdbbuilders');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+	/** MySQL database username */
+	define('DB_USER', 'tdbbu158_master');
 
+	/** MySQL database password */
+	define('DB_PASSWORD', '.Xy4y3_6Wq4[D@QoA@');
+
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
+}
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
