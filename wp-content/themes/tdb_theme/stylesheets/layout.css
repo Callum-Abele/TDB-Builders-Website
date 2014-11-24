@@ -290,6 +290,7 @@ div.contact.details h3 {
 div.contact.details {
 
 	padding-top:20px;
+	padding-left:10px;
 	height:50px;
 	width:800px;
 }
@@ -329,7 +330,17 @@ div.facebook_icon {
 	float:left;
 	font-family: "WebSymbolsRegular";
 	font-size:2em;
-	padding-top:25px;
+	width:170px;
+	padding-top:9px
+
+
+}
+div.facebook_icon h5 {
+
+	float:right;
+	color:white;
+	font-weight:bold;
+	font-size:small;
 }
 /*images*/
 figure {
@@ -749,6 +760,15 @@ ul.tabs li a.active {
 
 /* #Media Queries
 ================================================== */
+
+	@media (max-width:767px) {
+
+		div#navigation {
+
+			padding-top:60px;
+		}
+	}
+
 	@media  only screen and (max-width:768px) {
 	
 		h1.header-logo {
@@ -879,6 +899,8 @@ ul.tabs li a.active {
 
 			display:none;
 		}
+
+
 	}
 	
 	/* Additional large screens 1280+ */
@@ -889,91 +911,6 @@ ul.tabs li a.active {
 			font: 16px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		
 		}
-		/*
-		
-		.page {
-			width: 1280px;
-		}
-		
-		.chief {
-			float: right;
-			padding-right: 20px;
-		}
-		
-		.header {
-			float: right;
-		}
-		
-		.footer {
-			float: left;			
-		}
-		
-		.footer .columns {
-			clear: both;
-		}
-		
-		.header .container,
-		.footer .container,
-		.bottom .container {
-			width: 100%;
-			padding-left: 20px;
-			padding-right: 20px;
-		} 
-		
-		.bottom {
-	    	width: 100%;
-	    	clear: both;
-    	}
-    	
-    	.bottom .columns {
-	    	float: right;
-	    	text-align: left;
-    	}
-    	
-		.navigation {
-			float: left;
-		}
-		
-		.navigation .container {
-			padding: 35px 0 0;
-			width: 100%;
-		}
-		
-		.navigation .container .sixteen.columns {
-			width: 280px;
-			margin: 0;
-		}
-		
-		nav.primary ul li {
-			clear: both;
-			display: block;
-			width: 100%;
-			border-bottom: 1px solid #383737;
-		}
-		
-		nav.primary ul li > a {
-			display: block;
-			padding: 0 30px;
-		}
-		
-		nav.primary ul ul li a,
-		nav.primary ul li a {
-			line-height: 39px;
-		}
-		
-		nav.primary ul ul {
-			top: 0;
-			left: 100%;
-		}
-		
-		h3.logo {
-			display: none;
-		}
-		
-		header h1.logo {
-			margin: 7px 0 0 25px;
-		}
-		*/
 	}
 
 /* #Font-Face

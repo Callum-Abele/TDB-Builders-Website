@@ -50,6 +50,10 @@
 					<div class="four columns">
 						<h4>Mobile: 07612995634</h4>
 					</div>
+					<div class="four columns omega">
+						<div class="facebook_icon">f<a href="https://www.facebook.com/pages/TDB-Builders/1453216311615213?sk=info&tab=overview"><h5>Like us on Facebook</h5></a></div>
+
+					</div>
 				</div>
 				</div>
 
@@ -57,23 +61,10 @@
 				array(  
 					'menu' 				=> 'Primary Navigation',
 					'container'       	=> 'div',
-					'container_class' 	=> 'fourteen columns alpha',
+					'container_class' 	=> 'twelve columns',
 				   'container_id'       => 'navigation'	
 				)  
 			); ?>
-
-<!--
-			<div class="four columns omega">
-				<div class="contact details">
-					<div class="telephone_icon"></div><h5>01773 302222</h5>
-					<h5>07612995634</h5>
-				</div>
-
-				<div class="contact details">
-					<div class="facebook_icon">f<a href="https://www.facebook.com/pages/TDB-Builders/1453216311615213?sk=info&tab=overview"><h5>Like us on Facebook</h5></a></div>
-				</div>
-			</div> -->
-
 
 			</nav><!--end container-->
 
