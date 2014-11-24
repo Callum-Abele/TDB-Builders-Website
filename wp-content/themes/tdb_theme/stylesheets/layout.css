@@ -770,7 +770,7 @@ ul.tabs li a.active {
 
 	}
 
-	@media  only screen and (max-width:768px) {
+	@media  only screen and (max-width:767px) {
 
 
 		div#navigation {
