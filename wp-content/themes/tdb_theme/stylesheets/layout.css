@@ -53,8 +53,6 @@
 	
 	ul.menu a {
 
-		-webkit-text-stroke-width:1px;
-		-webkit-text-stroke-color:black;
 		font-size:large;
 	}
 	
@@ -176,7 +174,7 @@ h1.header-logo a {
 
 div#navigation {
 
-	padding-top:60px;
+
 	float:left;
 }
 /*navigation*/
@@ -279,6 +277,11 @@ nav.primary ul li:hover > a {
 
 }
 
+div.contact.details {
+
+	float:left;
+}
+
 div.contact.details h3 {
 
 	color:white;
@@ -286,18 +289,20 @@ div.contact.details h3 {
 }
 div.contact.details {
 
-	padding-left:50px;
-	padding-top:30px;
-	height:50px;
-	width:240px;
+	padding-top:20px;
+	padding-left:10px;
+	width:800px;
 }
-div.contact.details h5 {
+div.contact.details h4 {
 
 	display:inline;
 	color:white;
 	padding-left:5px;
-	padding-top:-5px;
-	float:right;
+	padding-top:5px;
+	float:left;
+	font-weight:bold;
+	font-size:large;
+	font-family:HelveticaNeue;
 }
 
 div.contact.details a h5 {
@@ -324,7 +329,17 @@ div.facebook_icon {
 	float:left;
 	font-family: "WebSymbolsRegular";
 	font-size:2em;
-	padding-top:25px;
+	width:170px;
+	padding-top:9px
+
+
+}
+div.facebook_icon h5 {
+
+	float:right;
+	color:white;
+	font-weight:bold;
+	font-size:small;
 }
 /*images*/
 figure {
@@ -744,19 +759,25 @@ ul.tabs li a.active {
 
 /* #Media Queries
 ================================================== */
-	@media  only screen and (max-width:768px) {
-	
+
+	@media (max-width:480px) {
+
+		div.contact.details {
+
+			width:200px;
+		}
+
+	}
+
+	@media  only screen and (max-width:767px) {
+
+
 		h1.header-logo {
 
 			display:none;
 		}
 
 
-		div.contact.details {
-
-			padding-top:0px;
-			height:70px;
-		}
 
 	}
 
@@ -785,7 +806,12 @@ ul.tabs li a.active {
 		}
 	}
 	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {}
+	@media only screen and (max-width: 959px) {
+	
+	
+	}
+
+
 
 	/* Tablet Portrait size to standard 960 (devices and browsers) */
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
@@ -805,13 +831,24 @@ ul.tabs li a.active {
 			
 		h1.header-logo { 
 
-			display:none;
+	
+		}
+
+		div.contact.details h4 {
+	
+			font-size:small;
+		}
+		ul.menu a {
+
+			font-size:small;
 		}
 
 		div#navigation {
 		
 			float:left;
 		}
+
+	}
 
 	/* All Mobile Sizes (devices and browser) */
 	@media only screen and (max-width: 767px) {
@@ -856,24 +893,8 @@ ul.tabs li a.active {
 
 	/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 	@media only screen and (max-width: 479px) {
-	
-		/*sponsors*/
-		.sponsors .mini {
-			display:  none;
-		}
-		
-		.sponsors .maxi {
-			display: block;
-			float: none;
-			max-width: 100%;
-			margin: 0 0 7px 0;
-		}
-		
 
-		h1.header-logo { 
 
-			display:none;
-		}
 	}
 	
 	/* Additional large screens 1280+ */
@@ -884,91 +905,6 @@ ul.tabs li a.active {
 			font: 16px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		
 		}
-		/*
-		
-		.page {
-			width: 1280px;
-		}
-		
-		.chief {
-			float: right;
-			padding-right: 20px;
-		}
-		
-		.header {
-			float: right;
-		}
-		
-		.footer {
-			float: left;			
-		}
-		
-		.footer .columns {
-			clear: both;
-		}
-		
-		.header .container,
-		.footer .container,
-		.bottom .container {
-			width: 100%;
-			padding-left: 20px;
-			padding-right: 20px;
-		} 
-		
-		.bottom {
-	    	width: 100%;
-	    	clear: both;
-    	}
-    	
-    	.bottom .columns {
-	    	float: right;
-	    	text-align: left;
-    	}
-    	
-		.navigation {
-			float: left;
-		}
-		
-		.navigation .container {
-			padding: 35px 0 0;
-			width: 100%;
-		}
-		
-		.navigation .container .sixteen.columns {
-			width: 280px;
-			margin: 0;
-		}
-		
-		nav.primary ul li {
-			clear: both;
-			display: block;
-			width: 100%;
-			border-bottom: 1px solid #383737;
-		}
-		
-		nav.primary ul li > a {
-			display: block;
-			padding: 0 30px;
-		}
-		
-		nav.primary ul ul li a,
-		nav.primary ul li a {
-			line-height: 39px;
-		}
-		
-		nav.primary ul ul {
-			top: 0;
-			left: 100%;
-		}
-		
-		h3.logo {
-			display: none;
-		}
-		
-		header h1.logo {
-			margin: 7px 0 0 25px;
-		}
-		*/
 	}
 
 /* #Font-Face
