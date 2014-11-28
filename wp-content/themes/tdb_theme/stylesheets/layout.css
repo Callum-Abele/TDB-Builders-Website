@@ -174,7 +174,7 @@ h1.header-logo a {
 
 div#navigation {
 
-	padding-top:20px;
+
 	float:left;
 }
 /*navigation*/
@@ -291,7 +291,6 @@ div.contact.details {
 
 	padding-top:20px;
 	padding-left:10px;
-	height:50px;
 	width:800px;
 }
 div.contact.details h4 {
@@ -773,22 +772,12 @@ ul.tabs li a.active {
 	@media  only screen and (max-width:767px) {
 
 
-		div#navigation {
-
-			
-			margin-top:55px;
-		}
 		h1.header-logo {
 
 			display:none;
 		}
 
 
-		div.contact.details {
-
-			padding-top:0px;
-			height:70px;
-		}
 
 	}
 
