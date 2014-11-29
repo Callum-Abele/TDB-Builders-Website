@@ -42,7 +42,7 @@
 			<h1 class="header-logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 			<nav class="container primary">
 
-				<div class="twelve columns">
+		
 				<div class="contact details">
 					<div class="four columns alpha">	
 						<h4>Landline: 01773 302222</h4>
@@ -55,7 +55,7 @@
 
 					</div>
 				</div>
-				</div>
+	
 
 			<?php wp_nav_menu(  
 				array(  
