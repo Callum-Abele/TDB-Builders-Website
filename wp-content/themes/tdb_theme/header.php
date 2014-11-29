@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title><?php bloginfo('name'); ?><?php echo wp_title(); ?></title>
+	<title><?php echo wp_title(); ?></title>
 	
 	<meta name="author" content="">
 
