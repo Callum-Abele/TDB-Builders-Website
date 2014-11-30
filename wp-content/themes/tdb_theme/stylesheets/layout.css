@@ -172,6 +172,13 @@ h1.header-logo a {
 	display:block;
 }
 
+#huge_it_portfolio_content {
+
+	margin-left:2%;
+	margin-right:2%;
+	width:100%;
+}
+
 div#navigation {
 
 
@@ -904,6 +911,27 @@ ul.tabs li a.active {
 			background: url(../images/bg_main.png) repeat #f8f8f8;
 			font: 16px/24px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 		
+		}
+	}
+
+	/* iPad Portrait   */
+	@media all and (device-width: 768px) and (device-height: 1024px) {
+		
+		#huge_it_portfolio_content {
+
+			margin-left:12%;		
+			margin-right:10%;
+			width:80%;
+		}	
+	}
+	/* iPad Landscape */
+	 @media all and (device-width: 1024px) and (device-height: 768px) {
+		
+		 #huge_it_portfolio_content {
+
+	 	 	margin-left:7%;	 	 
+	 	 	margin-right:7%;
+ 			width:88%;
 		}
 	}
 
