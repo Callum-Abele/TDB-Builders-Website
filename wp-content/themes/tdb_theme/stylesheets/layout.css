@@ -927,12 +927,12 @@ ul.tabs li a.active {
 	/* iPad Landscape */
 	 @media all and (device-width: 1024px) and (device-height: 768px) {
 		
-		 #huge_it_portfolio_content {
+/*		 #huge_it_portfolio_content {
 
 	 	 	margin-left:7%;	 	 
 	 	 	margin-right:7%;
  			width:88%;
-		}
+		} */
 	}
 
 /* #Font-Face
