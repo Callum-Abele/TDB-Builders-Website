@@ -89,18 +89,19 @@ img {
 }
 
 .band.navigation {
-	background: url(../images/stitch_hr.png) left top repeat-x,
-				url(../images/bg_dark.png) repeat left 2px,
+
+	background: url(../images/stitch_staggered.png) left bottom repeat-x,
+				url(../images/bg_bottom.png) repeat,
 				#343434;	
-	padding: 0;
-	color: #e0e0e0; 
+
+	color: #e0e0e0;
+
 }
 
 .band.footer {
-	background: url(../images/stitch_large.png) left top repeat-x,
-				url(../images/bg_dark.png) repeat left 2px,
+	background:	url(../images/bg_dark.png) repeat left 2px,
 				#343434;
-	padding: 49px 0 14px 0;			
+	padding: 0 0 14px 0;			
 	color: #e0e0e0; 
 }
 
@@ -434,7 +435,7 @@ footer.main li:last-child {
 	background: none;
 }
 
-footer h1.footer-heading {
+h1.footer-heading {
 
 	padding-top:35px;
 	font-family:HelveticaNeue;
@@ -929,7 +930,7 @@ ul.tabs li a.active {
 			width:80%;
 		}	
 	}
-
+	/* iPad Landscape */
 	@media only screen 
 	and (min-device-width : 768px) 
 	and (max-device-width : 1024px) 
@@ -943,6 +944,18 @@ ul.tabs li a.active {
 		} 
 
 	}
+
+	/* iPhone 2G-4S in landscape */
+	@media only screen 
+	and (min-device-width: 320px)
+	and (max-device-width: 480px)
+	and (orientation: landscape) {
+
+	}
+
+
+
+	/* iPhone 2G-4S in portrait */
 
 /* #Font-Face
 ================================================== */
