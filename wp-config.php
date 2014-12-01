@@ -21,13 +21,13 @@ if(file_exists(dirname(__FILE__) . '/local-config.php')) {
 else {
 
 	/** The name of the database for WordPress */
-	define('DB_NAME', 'tdbbu158_tdbbuilders');
+	define('DB_NAME', 'gestures_wp');
 
 	/** MySQL database username */
-	define('DB_USER', 'tdbbu158_master');
+	define('DB_USER', 'gestures_master');
 
 	/** MySQL database password */
-	define('DB_PASSWORD', '.Xy4y3_6Wq4[D@QoA@');
+	define('DB_PASSWORD', 'vkuXRUoth6YR9Ha');
 
 	/** MySQL hostname */
 	define('DB_HOST', 'localhost');
