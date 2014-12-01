@@ -1,3 +1,4 @@
 *.log
 .htaccess
 local-config.php
+wp-content/uploads/
