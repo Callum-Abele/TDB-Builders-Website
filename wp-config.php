@@ -33,6 +33,8 @@ else {
 	define('DB_HOST', '10.168.1.72');
 }
 /** Database Charset to use in creating database tables. */
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/var/sites/t/tdbbuilders.co.uk/public_html/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define('DB_CHARSET', 'utf8');
 
 /** The Database Collate type. Don't change this if in doubt. */
