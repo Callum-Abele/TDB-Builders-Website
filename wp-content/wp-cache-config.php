@@ -5,6 +5,12 @@ WP-Cache Config Sample File
 See wp-cache.php for author details.
 */
 
+$wp_cache_preload_on = 1; //Added by WP-Cache Manager
+$wp_cache_preload_taxonomies = 1; //Added by WP-Cache Manager
+$wp_cache_preload_email_volume = 'many'; //Added by WP-Cache Manager
+$wp_cache_preload_email_me = 1; //Added by WP-Cache Manager
+$wp_cache_preload_interval = 1440; //Added by WP-Cache Manager
+$wp_cache_preload_posts = '28'; //Added by WP-Cache Manager
 $cache_schedule_interval = 'daily'; //Added by WP-Cache Manager
 $cache_gc_email_me = 0; //Added by WP-Cache Manager
 $cache_time_interval = '3600'; //Added by WP-Cache Manager
