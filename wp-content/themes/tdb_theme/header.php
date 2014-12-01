@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8">
-	<title><?php bloginfo('name'); ?><?php echo wp_title(); ?></title>
+	<title><?php echo wp_title(); ?></title>
 	
 	<meta name="author" content="">
 
@@ -26,7 +26,7 @@
 
 	<!-- Favicons
 	================================================== -->
-	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/images/favicon.ico">
+
 	<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="<?php echo get_template_directory_uri(); ?>/images/apple-touch-icon-114x114.png">
@@ -41,45 +41,32 @@
 		<div class="band navigation">
 			<h1 class="header-logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 			<nav class="container primary">
+
+		
+				<div class="contact details">
+					<div class="four columns alpha">	
+						<h4>Landline: 01773 302222</h4>
+					</div>
+					<div class="four columns">
+						<h4>Mobile: 07612995634</h4>
+					</div>
+					<div class="four columns omega">
+						<div class="facebook_icon">f<a href="https://www.facebook.com/pages/TDB-Builders/1453216311615213?sk=info&tab=overview"><h5>Like us on Facebook</h5></a></div>
+
+					</div>
+				</div>
+	
+
 			<?php wp_nav_menu(  
 				array(  
 					'menu' 				=> 'Primary Navigation',
 					'container'       	=> 'div',
-					'container_class' 	=> 'twelve columns alpha',
+					'container_class' 	=> 'twelve columns',
 				   'container_id'       => 'navigation'	
 				)  
 			); ?>
 
-
-			<div class="four columns omega">
-				<div class="contact details">
-					<div class="telephone_icon"></div><h5>01773 302222</h5>
-					<h5>07612995634</h5>
-				</div>
-
-				<div class="contact details">
-					<div class="facebook_icon">f<a href="https://www.facebook.com/pages/TDB-Builders/1453216311615213?sk=info&tab=overview"><h5>Like us on Facebook</h5></a></div>
-				</div>
-			</div>
-
-
 			</nav><!--end container-->
 
 		</div><!--end band-->	
-		<div class="band header">
-
-			<header class="container main">
-					
-					<div class="sixteen columns">
-						
-					<?php efs_slider(); ?>			
-					
-					</div>
-
-
-			</header><!--end container-->
-
-		</div><!--end band-->
-
-		<div class"band footer"></div>	
 

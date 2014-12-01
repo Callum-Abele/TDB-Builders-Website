@@ -13,20 +13,25 @@
  *
  * @package WordPress
  */
+if(file_exists(dirname(__FILE__) . '/local-config.php')) {
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'tdbbu158_tdbbuilders');
+	define('WP_LOCAL_DEV',true);
+	include( dirname(__FILE__) . '/local-config.php');
+}
+else {
 
-/** MySQL database username */
-define('DB_USER', 'tdbbu158_master');
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'tdbbuild1_wp');
 
-/** MySQL database password */
-define('DB_PASSWORD', '.Xy4y3_6Wq4[D@QoA@');
+	/** MySQL database username */
+	define('DB_USER', 'tdbbuild1_master');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+	/** MySQL database password */
+	define('DB_PASSWORD', 'PdGn7ux2XnnxANY');
 
+	/** MySQL hostname */
+	define('DB_HOST', '10.168.1.72');
+}
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8');
 
