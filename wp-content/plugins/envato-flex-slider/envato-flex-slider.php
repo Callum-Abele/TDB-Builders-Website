@@ -29,7 +29,10 @@ function efs_script(){
 
 print '<script type="text/javascript" charset="utf-8">
   jQuery(window).load(function() {
-    jQuery(\'.flexslider\').flexslider();
+	jQuery(\'.flexslider\').flexslider({
+
+		directionNav: false		
+	});
   });
 </script>';
 
@@ -49,7 +52,7 @@ function efs_get_slider(){
 	if (have_posts()) : while (have_posts()) : the_post(); 
 		$img= get_the_post_thumbnail( $post->ID, 'large' );
 		
-		$slider.='<li><figure>'.$img.'</figure></li>';
+		$slider.='<li>'.$img.'</li>';
 			
 	endwhile; endif; wp_reset_query();
 

@@ -528,11 +528,6 @@ html[xmlns] .slides {display: block;}
 	border-radius: 10px;
 }
 
-.flex-control-nav li a.active,
-.flex-control-nav li a:hover {
-	background: #f1f1f1;
-}
-
 /*blog*/
 
 hr {
