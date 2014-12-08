@@ -12,10 +12,6 @@ jQuery(document).ready(function () {
 		jQuery('#adminForm').attr('action',"admin.php?page=Options_portfolio_styles&task=save"+liID);
 		return false;
 	});
-	jQuery('.save-portfolio-options').click(function(){
-		alert("General Settings are disabled in free version. If you need those functionalityes, you need to buy the commercial version.");
-		return false;
-	});
 });
 
 	

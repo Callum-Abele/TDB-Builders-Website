@@ -34,25 +34,11 @@ jQuery(document).ready(function () {
 });
 </script>
 <?php $path_site2 = plugins_url("../images", __FILE__); ?>
-		<?php $path_site = plugins_url("Front_images", __FILE__); ?>
-			<div class="slider-options-head">
-		<div style="float: left;">
-			<div><a href="http://huge-it.com/wordpress-plugins-portfolio-gallery-user-manual/" target="_blank">User Manual</a></div>
-			<div>This section allows you to configure the Portfolio/Gallery options. <a href="http://huge-it.com/wordpress-plugins-portfolio-gallery-user-manual/" target="_blank">More...</a></div>
-		</div>
-		<div style="float: right;">
-			<a class="header-logo-text" href="http://huge-it.com/portfolio-gallery/" target="_blank">
-				<div><img width="250px" src="<?php echo $path_site2; ?>/huge-it1.png" /></div>
-				<div>Get the full version</div>
-			</a>
-		</div>
-	</div>
-	<div style="clear:both;"></div>
 			<div id="post-body-heading">
 				<h3>Lightbox Options</h3>
-				<a onclick="" class="save-portfolio-options button-primary">Save</a>
+				<a onclick="document.getElementById('adminForm').submit()" onclick="" class="save-portfolio-options button-primary">Save</a>
 			</div>
-		<form action="admin.php?page=Options_portfolio_lightbox_styles" method="post" id="adminForm" name="adminForm">
+		<form action="admin.php?page=Options_portfolio_lightbox_styles&task=save" method="post" id="adminForm" name="adminForm">
 			<div class="lightbox-options-block">
 			<h3>Internationalization</h3>
 			<?php include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
