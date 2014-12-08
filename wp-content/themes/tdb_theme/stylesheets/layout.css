@@ -84,7 +84,7 @@ img {
 }
 
 .band {
-	background: url(../images/bg_main.png) repeat #f8f8f8;
+	background: url(../images/bg_dark.png) repeat #f8f8f8;
 	padding: 0 0 14px 0;	
 }
 
@@ -526,11 +526,6 @@ html[xmlns] .slides {display: block;}
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-}
-
-.flex-control-nav li a.active,
-.flex-control-nav li a:hover {
-	background: #f1f1f1;
 }
 
 /*blog*/
