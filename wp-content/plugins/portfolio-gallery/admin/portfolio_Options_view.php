@@ -38,30 +38,18 @@ jQuery(document).ready(function () {
 <div class="wrap">
 
 <?php $path_site2 = plugins_url("../images", __FILE__); ?>
-		<?php $path_site = plugins_url("Front_images", __FILE__); ?>
-			<div class="slider-options-head">
-		<div style="float: left;">
-			<div><a href="http://huge-it.com/wordpress-plugins-portfolio-gallery-user-manual/" target="_blank">User Manual</a></div>
-			<div>This section allows you to configure the Portfolio/Gallery options. <a href="http://huge-it.com/wordpress-plugins-portfolio-gallery-user-manual/" target="_blank">More...</a></div>
-		</div>
-		<div style="float: right;">
-			<a class="header-logo-text" href="http://huge-it.com/portfolio-gallery/" target="_blank">
-				<div><img width="250px" src="<?php echo $path_site2; ?>/huge-it1.png" /></div>
-				<div>Get the full version</div>
-			</a>
-		</div>
-	</div>
-	<div style="clear:both;"></div>
+
 <div id="poststuff">
+		<?php $path_site = plugins_url("Front_images", __FILE__); ?>
 
 		<div id="post-body-content" class="portfolio-options">
 			<div id="post-body-heading">
 				<h3>General Options</h3>
 				
-				<a class="save-portfolio-options button-primary">Save</a>
+				<a onclick="document.getElementById('adminForm').submit()" class="save-portfolio-options button-primary">Save</a>
 		
 			</div>
-		<form action="admin.php?page=Options_portfolio_styles" method="post" id="adminForm" name="adminForm">
+		<form action="admin.php?page=Options_portfolio_styles&task=save" method="post" id="adminForm" name="adminForm">
 		<div id="portfolio-options-list">
 			
 			<ul id="portfolio-view-tabs">
@@ -881,7 +869,7 @@ jQuery(document).ready(function () {
 			</ul>
 
 		<div id="post-body-footer">
-			<a class="save-portfolio-options button-primary">Save</a>
+			<a onclick="document.getElementById('adminForm').submit()" class="save-portfolio-options button-primary">Save</a>
 			<div class="clear"></div>
 		</div>
 		</form>
