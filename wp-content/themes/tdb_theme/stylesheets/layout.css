@@ -790,7 +790,7 @@ ul.tabs li a.active {
 
 		h1.header-logo {
 
-			display:none;
+		/*	display:none; */
 		}
 
 
@@ -845,10 +845,6 @@ ul.tabs li a.active {
 			margin: 0 0 7px 0;
 		}
 			
-		h1.header-logo { 
-
-	
-		}
 
 		div.contact.details h4 {
 	
@@ -872,7 +868,7 @@ ul.tabs li a.active {
 			
 		h1.header-logo { 
 
-			display:none;
+/*			display:none; */
 		}
 
 		.banner {
