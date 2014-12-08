@@ -295,12 +295,6 @@ div.contact.details h3 {
 	color:white;
 	float:right;
 }
-div.contact.details {
-
-	padding-top:20px;
-	padding-left:10px;
-
-}
 div.contact.details h4 {
 
 	display:inline;
@@ -768,6 +762,7 @@ ul.tabs li a.active {
 .title-block h3 {
 
 	color:white;
+	font-family:HelveticaNeue;
 }
 
 /* #Page Styles
@@ -804,7 +799,7 @@ ul.tabs li a.active {
 			background:url(../images/logo.png) no-repeat;
 			width:130px;
 			height:120px;
-			padding-top:30px;
+		
 			
 		}
 
@@ -815,16 +810,6 @@ ul.tabs li a.active {
 		}
 
 
-
-		div.contact.details {
-
-			padding-top:15px;
-		}
-	}
-	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {
-	
-	
 	}
 
 
