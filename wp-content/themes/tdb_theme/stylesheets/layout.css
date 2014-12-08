@@ -84,7 +84,7 @@ img {
 }
 
 .band {
-	background: url(../images/bg_main.png) repeat #f8f8f8;
+	background: url(../images/bg_dark.png) repeat #f8f8f8;
 	padding: 0 0 14px 0;	
 }
 
@@ -294,12 +294,6 @@ div.contact.details h3 {
 
 	color:white;
 	float:right;
-}
-div.contact.details {
-
-	padding-top:20px;
-	padding-left:10px;
-
 }
 div.contact.details h4 {
 
@@ -526,11 +520,6 @@ html[xmlns] .slides {display: block;}
 	-webkit-border-radius: 10px;
 	-moz-border-radius: 10px;
 	border-radius: 10px;
-}
-
-.flex-control-nav li a.active,
-.flex-control-nav li a:hover {
-	background: #f1f1f1;
 }
 
 /*blog*/
@@ -762,6 +751,20 @@ ul.tabs li a.active {
 	float: right;
 }
 
+
+.element.hugeitmicro-item {
+
+	
+	background: url(../images/bg_bottom.png) repeat #f8f8f8;
+	
+}
+
+.title-block h3 {
+
+	color:white;
+	font-family:HelveticaNeue;
+}
+
 /* #Page Styles
 ================================================== */
 
@@ -782,7 +785,7 @@ ul.tabs li a.active {
 
 		h1.header-logo {
 
-			display:none;
+		/*	display:none; */
 		}
 
 
@@ -796,7 +799,7 @@ ul.tabs li a.active {
 			background:url(../images/logo.png) no-repeat;
 			width:130px;
 			height:120px;
-			padding-top:30px;
+		
 			
 		}
 
@@ -807,16 +810,6 @@ ul.tabs li a.active {
 		}
 
 
-
-		div.contact.details {
-
-			padding-top:15px;
-		}
-	}
-	/* Smaller than standard 960 (devices and browsers) */
-	@media only screen and (max-width: 959px) {
-	
-	
 	}
 
 
@@ -837,10 +830,6 @@ ul.tabs li a.active {
 			margin: 0 0 7px 0;
 		}
 			
-		h1.header-logo { 
-
-	
-		}
 
 		div.contact.details h4 {
 	
@@ -864,7 +853,7 @@ ul.tabs li a.active {
 			
 		h1.header-logo { 
 
-			display:none;
+/*			display:none; */
 		}
 
 		.banner {

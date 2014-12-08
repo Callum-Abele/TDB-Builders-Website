@@ -39,10 +39,10 @@
 	<div class="page">
 
 		<div class="band navigation">
-			<h1 class="header-logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 			<nav class="container primary">
 
 		
+			<h1 class="header-logo"><a href="<?php bloginfo('url'); ?>"><?php bloginfo('name'); ?></a></h1>
 				<div class="contact details">
 					<div class="four columns alpha">	
 						<h4>Landline: 01773 302222</h4>
