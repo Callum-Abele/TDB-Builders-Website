@@ -759,6 +759,11 @@ ul.tabs li a.active {
 	
 }
 
+#huge_it_portfolio_popup_list li.pupup-element {
+
+	background: url(./images/bg_bottom.png) repeat #f8f8f8;
+}
+
 .title-block h3 {
 
 	color:white;
