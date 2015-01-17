@@ -4,7 +4,7 @@ Plugin Name: Easy Testimonials
 Plugin URI: http://goldplugins.com/our-plugins/easy-testimonials-details/
 Description: Easy Testimonials - Provides custom post type, shortcode, sidebar widget, and other functionality for testimonials.
 Author: Gold Plugins
-Version: 1.14
+Version: 1.17.5
 Author URI: http://goldplugins.com
 
 This file is part of Easy Testimonials.
@@ -73,232 +73,27 @@ function easy_testimonials_setup_js() {
 //add Testimonial CSS to header
 function easy_testimonials_setup_css() {
 	wp_register_style( 'easy_testimonial_style', plugins_url('include/css/style.css', __FILE__) );
-	wp_register_style( 'easy_testimonial_dark_style', plugins_url('include/css/dark_style.css', __FILE__) );	
-	wp_register_style( 'easy_testimonial_light_style', plugins_url('include/css/light_style.css', __FILE__) );
-	wp_register_style( 'easy_testimonial_blue_style', plugins_url('include/css/blue_style.css', __FILE__) );
-	wp_register_style( 'easy_testimonial_clean_style', plugins_url('include/css/clean_style.css', __FILE__) );
-	wp_register_style( 'easy_testimonial_no_style', plugins_url('include/css/no_style.css', __FILE__) );
 	
 	if(isValidKey()){ 
 		//five star ratings
 		wp_register_style( 'easy_testimonial_rateit_style', plugins_url('include/css/rateit.css', __FILE__) );
-		//bubble
-		wp_register_style( 'easy_testimonial_bubble_style', plugins_url('include/css/bubble_style.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_bubble_style-brown', plugins_url('include/css/bubble_style-brown.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_bubble_style-pink', plugins_url('include/css/bubble_style-pink.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_bubble_style-blue-orange', plugins_url('include/css/bubble_style-blue-orange.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_bubble_style-red-grey', plugins_url('include/css/bubble_style-red-grey.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_bubble_style-purple-green', plugins_url('include/css/bubble_style-purple-green.css', __FILE__) );
-		//left avatar, 150x150
-		wp_register_style( 'easy_testimonial_avatar-left-style', plugins_url('include/css/avatar-left.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-blue-orange', plugins_url('include/css/avatar-left-blue-orange.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-brown', plugins_url('include/css/avatar-left-brown.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-pink', plugins_url('include/css/avatar-left-pink.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-purple-green', plugins_url('include/css/avatar-left-purple-green.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-red-grey', plugins_url('include/css/avatar-left-red-grey.css', __FILE__) );
-		//left avatar, 50x50
-		wp_register_style( 'easy_testimonial_avatar-left-style-50x50', plugins_url('include/css/avatar-left-50x50.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-50x50-blue-orange', plugins_url('include/css/avatar-left-50x50-blue-orange.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-50x50-brown', plugins_url('include/css/avatar-left-50x50-brown.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-50x50-pink', plugins_url('include/css/avatar-left-50x50-pink.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-50x50-purple-green', plugins_url('include/css/avatar-left-50x50-purple-green.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-left-style-50x50-red-grey', plugins_url('include/css/avatar-left-50x50-red-grey.css', __FILE__) );
-		//right avatar, 150x150
-		wp_register_style( 'easy_testimonial_avatar-right-style', plugins_url('include/css/avatar-right.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-blue-orange', plugins_url('include/css/avatar-right-blue-orange.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-brown', plugins_url('include/css/avatar-right-brown.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-pink', plugins_url('include/css/avatar-right-pink.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-purple-green', plugins_url('include/css/avatar-right-purple-green.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-red-grey', plugins_url('include/css/avatar-right-red-grey.css', __FILE__) );
-		//right avatar, 50x50
-		wp_register_style( 'easy_testimonial_avatar-right-style-50x50', plugins_url('include/css/avatar-right-50x50.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-50x50-blue-orange', plugins_url('include/css/avatar-right-50x50-blue-orange.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-50x50-brown', plugins_url('include/css/avatar-right-50x50-brown.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-50x50-pink', plugins_url('include/css/avatar-right-50x50-pink.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-50x50-purple-green', plugins_url('include/css/avatar-right-50x50-purple-green.css', __FILE__) );
-		wp_register_style( 'easy_testimonial_avatar-right-style-50x50-red-grey', plugins_url('include/css/avatar-right-50x50-red-grey.css', __FILE__) );
+		//pro themes
+		wp_register_style( 'easy_testimonials_pro_styles', plugins_url('include/css/easy_testimonials_pro.css', __FILE__) );
 	}
 	
-    switch(get_option('testimonials_style')){
-		case 'dark_style':
-			wp_enqueue_style( 'easy_testimonial_dark_style' );
-			break;
-		case 'light_style':
-			wp_enqueue_style( 'easy_testimonial_light_style' );
-			break;
-		case 'blue_style':
-			wp_enqueue_style( 'easy_testimonial_blue_style' );
-			break;
-		case 'clean_style':
-			wp_enqueue_style( 'easy_testimonial_clean_style' );
-			break;
-		case 'no_style':
-			//wp_enqueue_style( 'easy_testimonial_no_style' );
-			break;
-		//bubble
-		case 'bubble_style':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_bubble_style' );
-			}
-			break;
-		case 'bubble_style-brown':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_bubble_style-brown' );
-			}
-			break;
-		case 'bubble_style-pink':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_bubble_style-pink' );
-			}
-			break;
-		case 'bubble_style-blue-orange':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_bubble_style-blue-orange' );
-			}
-			break;
-		case 'bubble_style-red-grey':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_bubble_style-red-grey' );
-			}
-			break;
-		case 'bubble_style-purple-green':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_bubble_style-purple-green' );
-			}
-			break;
-		//left avatar, 150x150
-		case 'avatar-left-style':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style' );
-			}
-			break;
-		case 'avatar-left-style-blue-orange':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-blue-orange' );
-			}
-			break;
-		case 'avatar-left-style-pink':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-pink' );
-			}
-			break;
-		case 'avatar-left-style-brown':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-brown' );
-			}
-			break;
-		case 'avatar-left-style-red-grey':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-red-grey' );
-			}
-			break;
-		case 'avatar-left-style-purple-green':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-purple-green' );
-			}
-			break;
-		//left avatar, 50x50
-		case 'avatar-left-style-50x50':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-50x50' );
-			}
-			break;
-		case 'avatar-left-style-50x50-blue-orange':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-50x50-blue-orange' );
-			}
-			break;
-		case 'avatar-left-style-50x50-brown':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-50x50-brown' );
-			}
-			break;
-		case 'avatar-left-style-50x50-pink':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-50x50-pink' );
-			}
-			break;
-		case 'avatar-left-style-50x50-purple-green':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-50x50-purple-green' );
-			}
-			break;
-		case 'avatar-left-style-50x50-red-grey':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-left-style-50x50-red-grey' );
-			}
-			break;
-		//right avatar, 150x150
-		case 'avatar-right-style':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style' );
-			}
-			break;
-		case 'avatar-right-style-blue-orange':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-blue-orange' );
-			}
-			break;
-		case 'avatar-right-style-pink':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-pink' );
-			}
-			break;
-		case 'avatar-right-style-brown':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-brown' );
-			}
-			break;
-		case 'avatar-right-style-red-grey':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-red-grey' );
-			}
-			break;
-		case 'avatar-right-style-purple-green':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-purple-green' );
-			}
-			break;
-		//left avatar, 50x50
-		case 'avatar-right-style-50x50':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-50x50' );
-			}
-			break;
-		case 'avatar-right-style-50x50-blue-orange':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-50x50-blue-orange' );
-			}
-			break;
-		case 'avatar-right-style-50x50-brown':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-50x50-brown' );
-			}
-			break;
-		case 'avatar-right-style-50x50-pink':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-50x50-pink' );
-			}
-			break;
-		case 'avatar-right-style-50x50-purple-green':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-50x50-purple-green' );
-			}
-			break;
-		case 'avatar-right-style-50x50-red-grey':
-			if(isValidKey()){
-				wp_enqueue_style( 'easy_testimonial_avatar-right-style-50x50-red-grey' );
-			}
-			break;
-		case 'default_style':
-		default:
-			wp_enqueue_style( 'easy_testimonial_style' );
-			break;
+	//no style or the base style
+    $style = get_option('testimonials_style');
+	if($style == 'no_style'){
+		//do nothing
+	} else {
+		wp_enqueue_style( 'easy_testimonial_style' );
 	}
 	
 	//five star rating CSS file
+	//premium CSS file
 	if(isValidKey()){
 		wp_enqueue_style( 'easy_testimonial_rateit_style' );
+		wp_enqueue_style( 'easy_testimonials_pro_styles' );
 	}
 }
 
@@ -515,9 +310,6 @@ function submitTestimonialForm($atts){
 					update_post_meta( $new_id, '_ikcf_rating', $the_rating );
 				   
 					$inserted = true;
-
-					// do the wp_insert_post action to insert it
-					do_action('wp_insert_post', 'wp_insert_post'); 
 					
 					//if the user has submitted a photo with their testimonial, handle the upload
 					if( ! empty( $_FILES ) ) {
@@ -603,7 +395,7 @@ function submitTestimonialForm($atts){
 			ob_end_clean(); 
         }
        
-        return $content;
+        return apply_filters('easy_t_submission_form', $content);
 }
 
 //add Custom CSS
@@ -655,6 +447,7 @@ function easy_testimonials_setup_testimonials(){
 	$fields[] = array('name' => 'client', 'title' => 'Client Name', 'description' => "Name of the Client giving the testimonial.  Appears below the Testimonial.", 'type' => 'text'); 
 	$fields[] = array('name' => 'position', 'title' => 'Position / Location / Other', 'description' => "The information that appears below the client's name.", 'type' => 'text');  
 	$fields[] = array('name' => 'rating', 'title' => 'Rating', 'description' => "The client's rating, if submitted along with their testimonial.  This can be displayed below the client's position, or name if the position is hidden, or it can be displayed above the testimonial text.", 'type' => 'text');  
+	$fields[] = array('name' => 'htid', 'title' => 'HTID', 'description' => "Please leave this alone -- this field should never be publicly displayed.");  
 	$myCustomType = new ikTestimonialsCustomPostType($postType, $fields);
 	register_taxonomy( 'easy-testimonial-category', 'testimonial', array( 'hierarchical' => true, 'label' => __('Testimonial Category'), 'rewrite' => array('slug' => 'testimonial', 'with_front' => false) ) ); 
 	
@@ -744,6 +537,14 @@ function easy_t_cat_columns_content($value, $column_name, $tax_id) {
 	return "<code>[testimonials category='{$category->slug}']</code>"; 
 } 
 
+//return an array of random numbers within a given range
+//credit: http://stackoverflow.com/questions/5612656/generating-unique-random-numbers-within-a-range-php
+function UniqueRandomNumbersWithinRange($min, $max, $quantity) {
+    $numbers = range($min, $max);
+    shuffle($numbers);
+    return array_slice($numbers, 0, $quantity);
+}
+
 //load testimonials into an array and output a random one
 function outputRandomTestimonial($atts){
 	//load shortcode attributes into an array
@@ -758,7 +559,9 @@ function outputRandomTestimonial($atts){
 		'use_excerpt' => false,
 		'category' => '',
 		'show_thumbs' => '',
-		'show_rating' => false
+		'show_rating' => false,
+		'theme' => '',
+		'show_date' => false
 	), $atts ) );
 	
 	$show_thumbs = ($show_thumbs == '') ? get_option('testimonials_image') : $show_thumbs;
@@ -768,11 +571,12 @@ function outputRandomTestimonial($atts){
 	$loop = new WP_Query(array( 'post_type' => 'testimonial','posts_per_page' => '-1', 'easy-testimonial-category' => $category));
 	while($loop->have_posts()) : $loop->the_post();
 		$postid = get_the_ID();	
-
+		$testimonials[$i]['date'] = get_the_date('M. j, Y');
 		//load rating
 		//if set, append english text to it
 		$testimonials[$i]['rating'] = get_post_meta($postid, '_ikcf_rating', true); 
 		if(strlen($testimonials[$i]['rating'])>0){
+			$testimonials[$i]['num_stars'] = $testimonials[$i]['rating'];
 			$testimonials[$i]['rating'] = '<p class="easy_t_ratings" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content = "1"/><span itemprop="ratingValue">' . $testimonials[$i]['rating'] . '</span>/<span itemprop="bestRating">5</span> Stars.</p>';
 		}	
 
@@ -816,7 +620,7 @@ function outputRandomTestimonial($atts){
 			
 			$testimonials[$i]['image'] = get_the_post_thumbnail($postid, $testimonial_image_size);
 			if (strlen($testimonials[$i]['image']) < 2 && get_option('easy_t_mystery_man')){
-				$testimonials[$i]['image'] = '<img class="attachment-easy_testimonial_thumb wp-post-image" src="' . plugins_url('include/css/mystery_man.png', __FILE__) . '" />';
+				$testimonials[$i]['image'] = '<img class="attachment-easy_testimonial_thumb wp-post-image easy_testimonial_mystery_man" src="' . plugins_url('include/css/mystery_man.png', __FILE__) . '" />';
 			}
 		}
 		
@@ -836,8 +640,8 @@ function outputRandomTestimonial($atts){
 	foreach($randArray as $key => $rand){
 		if(isset($testimonials[$rand])){
 			$this_testimonial = $testimonials[$rand];
-			if(!$short_version){			
-				echo build_single_testimonial($this_testimonial,$show_thumbs,$show_title,$this_testimonial['postid'],$author_class,$body_class,$testimonials_link);
+			if(!$short_version){
+				echo build_single_testimonial($this_testimonial,$show_thumbs,$show_title,$this_testimonial['postid'],$author_class,$body_class,$testimonials_link,$theme,$show_date,$show_rating);
 			} else {
 				echo $this_testimonial['content'];
 			}
@@ -847,15 +651,7 @@ function outputRandomTestimonial($atts){
 	$content = ob_get_contents();
 	ob_end_clean();
 	
-	return $content;
-}
-
-//return an array of random numbers within a given range
-//credit: http://stackoverflow.com/questions/5612656/generating-unique-random-numbers-within-a-range-php
-function UniqueRandomNumbersWithinRange($min, $max, $quantity) {
-    $numbers = range($min, $max);
-    shuffle($numbers);
-    return array_slice($numbers, 0, $quantity);
+	return apply_filters('easy_t_random_testimonials_html', $content);
 }
 
 //output specific testimonial
@@ -871,7 +667,9 @@ function outputSingleTestimonial($atts){
 		'show_thumbs' => '',
 		'short_version' => false,
 		'word_limit' => false,
-		'show_rating' => false
+		'show_rating' => false,
+		'theme' => '',
+		'show_date' => false
 	), $atts ) );
 	
 	$show_thumbs = ($show_thumbs == '') ? get_option('testimonials_image') : $show_thumbs;
@@ -884,7 +682,7 @@ function outputSingleTestimonial($atts){
 	$loop = new WP_Query(array( 'post_type' => 'testimonial','p' => $id));
 	while($loop->have_posts()) : $loop->the_post();
 		$postid = get_the_ID();
-		
+		$testimonial['date'] = get_the_date('M. j, Y');
 		$testimonial['client'] = get_post_meta($postid, '_ikcf_client', true); 	
 		$testimonial['position'] = get_post_meta($postid, '_ikcf_position', true); 
 
@@ -892,6 +690,7 @@ function outputSingleTestimonial($atts){
 		//if set, append english text to it
 		$testimonial['rating'] = get_post_meta($postid, '_ikcf_rating', true); 
 		if(strlen($testimonial['rating'])>0){
+			$testimonial['num_stars'] = $testimonial['rating'];
 			$testimonial['rating'] = '<p class="easy_t_ratings" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content = "1"/><span itemprop="ratingValue">' . $testimonial['rating'] . '</span>/<span itemprop="bestRating">5</span> Stars.</p>';
 			//$testimonial['rating'] = '<span class="easy_t_ratings">' . $testimonial['rating'] . '/5 Stars.</span>';
 		}	
@@ -932,14 +731,14 @@ function outputSingleTestimonial($atts){
 			
 			$testimonial['image'] = get_the_post_thumbnail($postid, $testimonial_image_size);
 			if (strlen($testimonial['image']) < 2 && get_option('easy_t_mystery_man')){
-				$testimonial['image'] = '<img class="attachment-easy_testimonial_thumb wp-post-image" src="' . plugins_url('include/css/mystery_man.png', __FILE__) . '" />';
+				$testimonial['image'] = '<img class="attachment-easy_testimonial_thumb wp-post-image easy_testimonial_mystery_man" src="' . plugins_url('include/css/mystery_man.png', __FILE__) . '" />';
 			}
 		}
 		
 		$testimonial['client'] = get_post_meta($postid, '_ikcf_client', true); 	
 		$testimonial['position'] = get_post_meta($postid, '_ikcf_position', true); 
 	
-		echo build_single_testimonial($testimonial,$show_thumbs,$show_title,$postid,$author_class,$body_class,$testimonials_link);
+		echo build_single_testimonial($testimonial,$show_thumbs,$show_title,$postid,$author_class,$body_class,$testimonials_link,$theme,$show_date,$show_rating);
 			
 	endwhile;	
 	wp_reset_query();
@@ -947,7 +746,7 @@ function outputSingleTestimonial($atts){
 	$content = ob_get_contents();
 	ob_end_clean();	
 	
-	return $content;
+	return apply_filters( 'easy_t_single_testimonial_html', $content);
 }
 
 //output all testimonials
@@ -969,7 +768,9 @@ function outputTestimonials($atts){
 		'order' => 'ASC',//'DESC'
 		'show_rating' => false,
 		'paginate' => false,
-		'testimonials_per_page' => 10
+		'testimonials_per_page' => 10,
+		'theme' => '',
+		'show_date' => false
 	), $atts ) );
 	
 	$show_thumbs = ($show_thumbs == '') ? get_option('testimonials_image') : $show_thumbs;
@@ -991,7 +792,7 @@ function outputTestimonials($atts){
 	$loop = new WP_Query(array( 'post_type' => 'testimonial','posts_per_page' => $count, 'easy-testimonial-category' => $category, 'orderby' => $orderby, 'order' => $order, 'paged' => get_query_var( 'paged' )));
 	while($loop->have_posts()) : $loop->the_post();
 		$postid = get_the_ID();	
-		
+		$testimonial['date'] = get_the_date('M. j, Y');
 		if($use_excerpt){
 			$testimonial['content'] = get_the_excerpt();
 		} else {				
@@ -1001,9 +802,10 @@ function outputTestimonials($atts){
 		//load rating
 		//if set, append english text to it
 		$testimonial['rating'] = get_post_meta($postid, '_ikcf_rating', true); 
-		if(strlen($testimonial['rating'])>0){
+		if(strlen($testimonial['rating'])>0){	
+			$testimonial['num_stars'] = $testimonial['rating'];
 			$testimonial['rating'] = '<p class="easy_t_ratings" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content = "1"/><span itemprop="ratingValue">' . $testimonial['rating'] . '</span>/<span itemprop="bestRating">5</span> Stars.</p>';
-			//$testimonial['rating'] = '<span class="easy_t_ratings">' . $testimonial['rating'] . '/5 Stars.</span>';
+			//$testimonial['rating'] = '<span class="easy_t_ratings">' . $testimonial['rating'] . '/5 Stars.</span>';		
 		}	
 		
 		//if nothing is set for the short content, use the long content
@@ -1036,14 +838,14 @@ function outputTestimonials($atts){
 		
 			$testimonial['image'] = get_the_post_thumbnail($postid, $testimonial_image_size);
 			if (strlen($testimonial['image']) < 2 && get_option('easy_t_mystery_man')){
-				$testimonial['image'] = '<img class="attachment-easy_testimonial_thumb wp-post-image" src="' . plugins_url('include/css/mystery_man.png', __FILE__) . '" />';
+				$testimonial['image'] = '<img class="attachment-easy_testimonial_thumb wp-post-image easy_testimonial_mystery_man" src="' . plugins_url('include/css/mystery_man.png', __FILE__) . '" />';
 			}
 		}
 		
 		$testimonial['client'] = get_post_meta($postid, '_ikcf_client', true); 	
 		$testimonial['position'] = get_post_meta($postid, '_ikcf_position', true); 	
 	
-		echo build_single_testimonial($testimonial,$show_thumbs,$show_title,$postid,$author_class,$body_class,$testimonials_link);
+		echo build_single_testimonial($testimonial,$show_thumbs,$show_title,$postid,$author_class,$body_class,$testimonials_link,$theme,$show_date,$show_rating);
 			
 	endwhile;	
 	
@@ -1061,13 +863,12 @@ function outputTestimonials($atts){
 	$content = ob_get_contents();
 	ob_end_clean();	
 	
-	return $content;
+	return apply_filters('easy_t_testimonials_html', $content);
 }
 
 
 //output all testimonials for use in JS widget
-function outputTestimonialsCycle($atts){ 
-	
+function outputTestimonialsCycle($atts){ 	
 	//load shortcode attributes into an array
 	extract( shortcode_atts( array(
 		'testimonials_link' => get_option('testimonials_link'),
@@ -1087,7 +888,9 @@ function outputTestimonialsCycle($atts){
 		'pager' => false,
 		'show_pager_icons' => false,
 		'show_rating' => false,
-		'testimonials_per_slide' => 1
+		'testimonials_per_slide' => 1,
+		'theme' => '',
+		'show_date' => false
 	), $atts ) );	
 	
 	$show_thumbs = ($show_thumbs == '') ? get_option('testimonials_image') : $show_thumbs;
@@ -1134,6 +937,8 @@ function outputTestimonialsCycle($atts){
 	
 		$postid = get_the_ID();
 
+		$testimonial['date'] = get_the_date('M. j, Y');
+		
 		//if nothing is set for the short content, use the long content
 		if($use_excerpt){
 			$testimonial['content'] = get_the_excerpt();
@@ -1145,6 +950,7 @@ function outputTestimonialsCycle($atts){
 		//if set, append english text to it
 		$testimonial['rating'] = get_post_meta($postid, '_ikcf_rating', true); 
 		if(strlen($testimonial['rating'])>0){
+			$testimonial['num_stars'] = $testimonial['rating'];
 			$testimonial['rating'] = '<p class="easy_t_ratings" itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating"><meta itemprop="worstRating" content = "1"/><span itemprop="ratingValue">' . $testimonial['rating'] . '</span>/<span itemprop="bestRating">5</span> Stars.</p>';
 			//$testimonial['rating'] = '<span class="easy_t_ratings">' . $testimonial['rating'] . '/5 Stars.</span>';
 		}	
@@ -1179,14 +985,14 @@ function outputTestimonialsCycle($atts){
 		
 			$testimonial['image'] = get_the_post_thumbnail($postid, $testimonial_image_size);
 			if (strlen($testimonial['image']) < 2 && get_option('easy_t_mystery_man')){
-				$testimonial['image'] = '<img class="attachment-easy_testimonial_thumb wp-post-image" src="' . plugins_url('include/css/mystery_man.png', __FILE__) . '" />';
+				$testimonial['image'] = '<img class="attachment-easy_testimonial_thumb wp-post-image easy_testimonial_mystery_man" src="' . plugins_url('include/css/mystery_man.png', __FILE__) . '" />';
 			}
 		}
 		
 		$testimonial['client'] = get_post_meta($postid, '_ikcf_client', true); 	
 		$testimonial['position'] = get_post_meta($postid, '_ikcf_position', true); 
 		
-		echo build_single_testimonial($testimonial,$show_thumbs,$show_title,$postid,$author_class,$body_class,$testimonials_link);
+		echo build_single_testimonial($testimonial,$show_thumbs,$show_title,$postid,$author_class,$body_class,$testimonials_link,$theme,$show_date,$show_rating);
 		
 		if($counter%$testimonials_per_slide == 0){
 			?></div><?php
@@ -1207,13 +1013,13 @@ function outputTestimonialsCycle($atts){
 	$content = ob_get_contents();
 	ob_end_clean();	
 	
-	return $content;
+	return apply_filters( 'easy_t_testimonials_cyle_html', $content);
 }
 
 //given a full set of data for a testimonial
 //assemble the html for that testimonial
 //taking into account current options
-function build_single_testimonial($testimonial,$show_thumbs,$show_title,$postid,$author_class,$body_class,$testimonials_link){
+function build_single_testimonial($testimonial,$show_thumbs,$show_title,$postid,$author_class,$body_class,$testimonials_link,$theme,$show_date=false,$show_rating=false){
 /* scheme.org example
  <div itemprop="review" itemscope itemtype="http://schema.org/Review">
     <span itemprop="name">Not a happy camper</span> -
@@ -1228,38 +1034,114 @@ function build_single_testimonial($testimonial,$show_thumbs,$show_title,$postid,
     it. </span>
   </div>
  */
+ 
+	$output_theme = easy_t_get_theme_class($theme);
 ?>
-	<blockquote itemprop="review" itemscope itemtype="http://schema.org/Review" class="easy_testimonial">		
-		<?php if ($show_thumbs) {
-			echo $testimonial['image'];
-		} ?>		
-		<?php if ($show_title) {
-			echo '<p itemprop="name" class="easy_testimonial_title">' . get_the_title($postid) . '</p>';
-		} ?>	
-		<?php if(get_option('meta_data_position')): ?>
-			<p class="<?php echo $author_class; ?>">
-				<?php if(strlen($testimonial['client'])>0 || strlen($testimonial['position'])>0 ): ?>
-				<cite><span class="testimonial-client" itemprop="author"><?php echo $testimonial['client'];?></span><br/><span class="testimonial-position"><?php echo $testimonial['position'];?></span></cite>
-				<?php endif; ?>
-			</p>	
-		<?php endif; ?>
-		<div class="<?php echo $body_class; ?>" itemprop="description">
-			<?php if(get_option('easy_t_apply_content_filter',false)): ?>
-				<?php echo apply_filters('the_content',$testimonial['content']); ?>
-			<?php else:?>
-				<?php echo wpautop($testimonial['content']); ?>
-			<?php endif;?>
-			<?php if(strlen($testimonials_link)>2):?><a href="<?php echo $testimonials_link; ?>" class="easy_testimonials_read_more_link">Read More</a><?php endif; ?>
-		</div>	
-		<?php if(!get_option('meta_data_position')): ?>			
-			<p class="<?php echo $author_class; ?>">
-				<?php if(strlen($testimonial['client'])>0 || strlen($testimonial['position'])>0 ): ?>
-				<cite><span class="testimonial-client" itemprop="author"><?php echo $testimonial['client'];?></span><br/><span class="testimonial-position"><?php echo $testimonial['position'];?></span></cite>
-				<?php endif; ?>
-			</p>	
-		<?php endif; ?>
-	</blockquote>
+	<div class="<?php echo $output_theme; ?>">
+		<blockquote itemprop="review" itemscope itemtype="http://schema.org/Review" class="easy_testimonial">		
+			<?php if ($show_thumbs) {
+				echo $testimonial['image'];
+			} ?>		
+			<?php if ($show_title) {
+				echo '<p itemprop="name" class="easy_testimonial_title">' . get_the_title($postid) . '</p>';
+			} ?>	
+			<?php if(get_option('meta_data_position')): ?>
+				<p class="<?php echo $author_class; ?>">
+					<?php if(strlen($testimonial['client'])>0 || strlen($testimonial['position'])>0 ): ?>
+					<cite>
+						<span class="testimonial-client" itemprop="author"><?php echo $testimonial['client'];?>&nbsp;</span>
+						<span class="testimonial-position"><?php echo $testimonial['position'];?>&nbsp;</span>
+						<?php if($show_date): ?>
+							<span class="date" itemprop="datePublished" content="<?php echo $testimonial['date'];?>"><?php echo $testimonial['date'];?>&nbsp;</span>
+						<?php endif; ?>
+						<?php if($show_rating == "stars"): ?>
+							<span class="stars">
+							<?php 
+								$x = 5; //total available stars
+								//output dark stars for the filled in ones
+								for($i = 0; $i < $testimonial['num_stars']; $i ++){
+									echo '<span class="dashicons dashicons-star-filled"></span>';
+									$x--; //one less star available
+								}
+								//fill out the remaining empty stars
+								for($i = 0; $i < $x; $i++){
+									echo '<span class="dashicons dashicons-star-filled empty"></span>';
+								}
+							?>			
+							</span>	
+						<?php endif; ?>
+					</cite>
+					<?php endif; ?>
+				</p>	
+			<?php endif; ?>
+			<div class="<?php echo $body_class; ?>" itemprop="description">
+				<?php if(get_option('easy_t_apply_content_filter',false)): ?>
+					<?php echo apply_filters('the_content',$testimonial['content']); ?>
+				<?php else:?>
+					<?php echo wpautop($testimonial['content']); ?>
+				<?php endif;?>
+				<?php if(strlen($testimonials_link)>2):?><a href="<?php echo $testimonials_link; ?>" class="easy_testimonials_read_more_link">Read More</a><?php endif; ?>
+			</div>	
+			<?php if(!get_option('meta_data_position')): ?>			
+				<p class="<?php echo $author_class; ?>">
+					<?php if(strlen($testimonial['client'])>0 || strlen($testimonial['position'])>0 ): ?>
+					<cite>
+						<span class="testimonial-client" itemprop="author"><?php echo $testimonial['client'];?>&nbsp;</span>
+						<span class="testimonial-position"><?php echo $testimonial['position'];?>&nbsp;</span>
+						<?php if($show_date): ?>
+							<span class="date" itemprop="datePublished" content="<?php echo $testimonial['date'];?>"><?php echo $testimonial['date'];?>&nbsp;</span>
+						<?php endif; ?>
+						<?php if($show_rating == "stars"): ?>
+							<span class="stars">
+							<?php 
+								$x = 5; //total available stars
+								//output dark stars for the filled in ones
+								for($i = 0; $i < $testimonial['num_stars']; $i ++){
+									echo '<span class="dashicons dashicons-star-filled"></span>';
+									$x--; //one less star available
+								}
+								//fill out the remaining empty stars
+								for($i = 0; $i < $x; $i++){
+									echo '<span class="dashicons dashicons-star-filled empty"></span>';
+								}
+							?>			
+							</span>	
+						<?php endif; ?>
+					</cite>
+					<?php endif; ?>					
+				</p>	
+			<?php endif; ?>
+		</blockquote>
+	</div>
 <?php
+}
+
+//passed a string
+//finds a matching theme or loads the theme currently selected on the options page
+//returns appropriate class name string to match theme
+function easy_t_get_theme_class($theme_string){	
+	$the_theme = get_option('testimonials_style');
+	
+	//array of themes that are available
+	$theme_array = array(
+		'dark_style','light_style','blue_style','clean_style','no_style','bubble_style','bubble_style-brown','bubble_style-pink','bubble_style-blue-orange','bubble_style-red-grey','bubble_style-purple-green','avatar-left-style','avatar-left-style-blue-orange','avatar-left-style-pink','avatar-left-style-brown','avatar-left-style-red-grey','avatar-left-style-purple-green','avatar-left-style-50x50','avatar-left-style-50x50-blue-orange','avatar-left-style-50x50-brown','avatar-left-style-50x50-pink','avatar-left-style-50x50-purple-green','avatar-left-style-50x50-red-grey','avatar-right-style','avatar-right-style-blue-orange','avatar-right-style-pink','avatar-right-style-brown','avatar-right-style-red-grey','avatar-right-style-purple-green','avatar-right-style-50x50','avatar-right-style-50x50-blue-orange','avatar-right-style-50x50-brown','avatar-right-style-50x50-pink','avatar-right-style-50x50-purple-green','avatar-right-style-50x50-red-grey','default_style','card_style','card_style-salmon','card_style-orange','card_style-purple','card_style-slate','elegant_style-sky_blue','elegant_style-graphite','elegant_style-green_hills','elegant_style-salmon','elegant_style-smoke','notepad_style-stone','notepad_style-sea_blue','notepad_style-forest_green','notepad_style-red_rock','notepad_style-purple_gems','business_style-stone','business_style-blue','business_style-green','business_style-red','business_style-grey','modern_style-concept','modern_style-money','modern_style-digitalism','modern_style-power','modern_style-sleek',
+	);
+	
+	//if the theme string is passed
+	if(strlen($theme_string)>2){
+		//if the theme string is valid
+		if(in_array($theme_string, $theme_array)){			
+			//use the theme string
+			$the_theme = $theme_string;
+		}
+	}
+	
+	//remove style from the middle of our theme options and place it as a prefix
+	//matching our CSS files
+	$the_theme = str_replace('-style', '', $the_theme);
+	$the_theme = "style-" . $the_theme;	
+	
+	return $the_theme;
 }
 
 //only do this once
@@ -1292,18 +1174,156 @@ function easy_testimonials_admin_init()
 	
 }
 
+//add an inline link to the settings page, before the "deactivate" link
+function add_settings_link_to_plugin_action_links($links) { 
+  $settings_link = '<a href="admin.php?page=easy-testimonials-settings">Settings</a>';
+  array_unshift($links, $settings_link); 
+  return $links; 
+}
+
+// add inline links to our plugin's description area on the Plugins page
+function add_custom_links_to_plugin_description($links, $file) { 
+
+	/** Get the plugin file name for reference */
+	$plugin_file = plugin_basename( __FILE__ );
+ 
+	/** Check if $plugin_file matches the passed $file name */
+	if ( $file == $plugin_file )
+	{		
+		$new_links['settings_link'] = '<a href="admin.php?page=easy-testimonials-settings">Settings</a>';
+		$new_links['support_link'] = '<a href="http://goldplugins.com/contact/?utm-source=plugin_menu&utm_campaign=support&utm_banner=bananaphone" target="_blank">Get Support</a>';
+			
+		if(!isValidKey()){
+			$new_links['upgrade_to_pro'] = '<a href="http://goldplugins.com/our-plugins/easy-testimonials-details/upgrade-to-easy-testimonials-pro/?utm_source=plugin_menu&utm_campaign=upgrade" target="_blank">Upgrade to Pro</a>';
+		}
+		
+		$links = array_merge( $links, $new_links);
+	}
+	return $links; 
+}
+
+/* hello t integration */
+
+//open up the json
+//determine which testimonials are new, or assume we have loaded only new testimonials
+//parse object and insert new testimonials
+function add_hello_t_testimonials(){	
+	$the_time = time();
+	
+	$url = get_option('easy_t_hello_t_json_url') . "?last=" . get_option('easy_t_hello_t_last_time', 0);
+	
+	$response = wp_remote_get( $url );
+			
+	if(@isset($response['body'])){
+		$response = json_decode($response['body']);
+		
+		if(isset($response->testimonials)){
+			foreach($response->testimonials as $testimonial){				
+				//look for a testimonial with the same HTID
+				//if not found, insert this one
+				$args = array(
+					'post_type' => 'testimonial',
+					'meta_query' => array(
+						array(
+							'key' => '_ikcf_htid',
+							'value' => $testimonial->id,
+						)
+					)
+				 );
+				$postslist = get_posts( $args );
+				
+				//if this is empty, a match wasn't found and therefore we are safe to insert
+				if(empty($postslist)){				
+					//insert the testimonials
+					
+					//defaults
+					$the_name = '';
+					$the_rating = 5;
+		
+					if (isset ($testimonial->name)) {
+						$the_name = $testimonial->name;
+					}
+					
+					//assumes rating is always out of 5
+					if (isset ($testimonial->rating)) {
+						$the_rating = $testimonial->rating;
+					}
+					
+					$tags = array();
+				   
+					$post = array(
+						'post_title'    => $testimonial->name,
+						'post_content'  => $testimonial->body,
+						'post_category' => array(1),  // custom taxonomies too, needs to be an array
+						'tags_input'    => $tags,
+						'post_status'   => 'publish',
+						'post_type'     => 'testimonial'
+					);
+				
+					$new_id = wp_insert_post($post);
+				   
+					update_post_meta( $new_id, '_ikcf_client', $the_name );
+					update_post_meta( $new_id, '_ikcf_rating', $the_rating );
+					update_post_meta( $new_id, '_ikcf_htid', $testimonial->id );
+				   
+					$inserted = true;
+					
+					//update the last inserted id
+					update_option( 'easy_t_hello_t_last_time', $the_time );
+				}
+			}
+		}
+	}
+}
+
+function hello_t_nag_ignore() {
+	global $current_user;
+	$user_id = $current_user->ID;
+	/* If user clicks to ignore the notice, add that to their user meta */
+	if ( isset($_GET['hello_t_nag_ignore']) && '0' == $_GET['hello_t_nag_ignore'] ) {
+		 add_user_meta($user_id, 'hello_t_nag_ignore', 'true', true);
+	}
+}
+
+//activate the cron job
+function hello_t_cron_activate(){
+	wp_schedule_event( time(), 'hourly', 'hello_t_subscription');
+}
+
+//deactivate the cron job when the plugin is deactivated
+function hello_t_cron_deactivate(){
+	wp_clear_scheduled_hook('hello_t_subscription');
+}
+
+add_action('hello_t_subscription', 'add_hello_t_testimonials');
+
+//this runs a function when this plugin is deactivated
+register_deactivation_hook( __FILE__, 'hello_t_cron_deactivate' );
+
+/* end hello t integration */
+
+
+//"Construct"
+
+//load any custom shortcodes
+$random_testimonial_shortcode = get_option('ezt_random_testimonial_shortcode', 'random_testimonial');
+$single_testimonial_shortcode = get_option('ezt_single_testimonial_shortcode', 'single_testimonial');
+$testimonials_shortcode = get_option('ezt_testimonials_shortcode', 'testimonials');
+$submit_testimonial_shortcode = get_option('ezt_submit_testimonial_shortcode', 'submit_testimonial');
+$testimonials_cycle_shortcode = get_option('ezt_cycle_testimonial_shortcode', 'testimonials_cycle');
+
 //create shortcodes
-add_shortcode('random_testimonial', 'outputRandomTestimonial');
-add_shortcode('single_testimonial', 'outputSingleTestimonial');
-add_shortcode('testimonials', 'outputTestimonials');
-add_shortcode('submit_testimonial', 'submitTestimonialForm');
-add_shortcode('testimonials_cycle' , 'outputTestimonialsCycle');
+add_shortcode($random_testimonial_shortcode, 'outputRandomTestimonial');
+add_shortcode($single_testimonial_shortcode, 'outputSingleTestimonial');
+add_shortcode($testimonials_shortcode, 'outputTestimonials');
+add_shortcode($submit_testimonial_shortcode, 'submitTestimonialForm');
+add_shortcode($testimonials_cycle_shortcode , 'outputTestimonialsCycle');
 
 //add JS
 add_action( 'wp_enqueue_scripts', 'easy_testimonials_setup_js' );
 
 //add CSS
-add_action( 'wp_head', 'easy_testimonials_setup_css' );
+add_action( 'wp_enqueue_scripts', 'easy_testimonials_setup_css' );
 
 //add Custom CSS
 add_action( 'wp_head', 'easy_testimonials_setup_custom_css');
@@ -1320,6 +1340,11 @@ add_action('manage_testimonial_posts_custom_column', 'easy_t_columns_content', 1
 
 add_filter('manage_edit-easy-testimonial-category_columns', 'easy_t_cat_column_head', 10);  
 add_action('manage_easy-testimonial-category_custom_column', 'easy_t_cat_columns_content', 10, 3); 
+
+//add our custom links for Settings and Support to various places on the Plugins page
+$plugin = plugin_basename(__FILE__);
+add_filter( "plugin_action_links_{$plugin}", 'add_settings_link_to_plugin_action_links' );
+add_filter( 'plugin_row_meta', 'add_custom_links_to_plugin_description', 10, 2 );	
 
 //flush rewrite rules - only do this once!
 register_activation_hook( __FILE__, 'easy_testimonials_rewrite_flush' );

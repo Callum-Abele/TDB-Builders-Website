@@ -2,9 +2,9 @@
 Contributors: richardgabriel, ghuger
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=V7HR8DP4EJSYN
 Tags: testimonials, testimonial widget, testimonial feed, random testimonials
-Requires at least: 3.0.1
-Tested up to: 4.0
-Stable tag: 1.14
+Requires at least: 3.1
+Tested up to: 4.1
+Stable tag: 1.17.5
 License: GPLv3 or later
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 
@@ -19,6 +19,8 @@ Easy Testimonials is an easy-to-use plugin that allows users to add Testimonials
 * Adding a Random Testimonial to Your Page
 * Outputting a List of Testimonials
 * Outputting a Fading or Sliding Testimonial Widget
+* Able To Use Multiple Testimonial Themes on the Same Page!
+* Developers love our Filters!
 * Displaying an Image with a Testimonial
 * Displaying a Testimonial with a Rating
 * Displaying Testimonials using Schema.org compliant markup
@@ -86,17 +88,25 @@ You have a few things to pay attention to:
   
   **You can also change the Status of a Testimonial, if you want to keep it on file.**
 
+### Controlling Testimonial Theme via Shortcode ###
+* To select a theme via the Shortcode, use the ```theme='theme_name'``` attribute in any of our shortcodes.  
+* Valid theme options in the Free version are: ```'dark_style','light_style','clean_style','no_style','default_style'```.
+* Valid theme options in the Pro version are: ```'bubble_style','bubble_style-brown','bubble_style-pink','bubble_style-blue-orange','bubble_style-red-grey','bubble_style-purple-green','avatar-left-style','avatar-left-style-blue-orange','avatar-left-style-pink','avatar-left-style-brown','avatar-left-style-red-grey','avatar-left-style-purple-green','avatar-left-style-50x50','avatar-left-style-50x50-blue-orange','avatar-left-style-50x50-brown','avatar-left-style-50x50-pink','avatar-left-style-50x50-purple-green','avatar-left-style-50x50-red-grey','avatar-right-style','avatar-right-style-blue-orange','avatar-right-style-pink','avatar-right-style-brown','avatar-right-style-red-grey','avatar-right-style-purple-green','avatar-right-style-50x50','avatar-right-style-50x50-blue-orange','avatar-right-style-50x50-brown','avatar-right-style-50x50-pink','avatar-right-style-50x50-purple-green','avatar-right-style-50x50-red-grey','card_style','card_style-salmon','card_style-orange','card_style-purple','card_style-slate','elegant_style-sky_blue','elegant_style-graphite','elegant_style-green_hills','elegant_style-salmon','elegant_style-smoke','notepad_style-stone','notepad_style-sea_blue','notepad_style-forest_green','notepad_style-red_rock','notepad_style-purple_gems','business_style-stone','business_style-blue','business_style-green','business_style-red','business_style-grey','modern_style-concept','modern_style-money','modern_style-digitalism','modern_style-power','modern_style-sleek',```
+* If no Theme is passed via the Shortcode, the Theme set on the Settings page will be used.
+  
 ### Outputting Random Testimonials ###
 * To output a Random Testimonial, place the shortcode ```[random_testimonial]``` in the desired area of the Page or Post Content. To display more than one random testimonial, use the shortcode ```[random_testimonial count='3']```, where count is the number of testimonials you want displayed.  
 * To display the title above the testimonial, use the shortcode ```[random_testimonial show_title="1"]```.  To use the Excerpt of a testimonial, add the attribute ```use_excerpt=1``` to your shortcode.  To output Testimonials in a specific Category, use the attribute ```category='the_category_slug'```.  To show or hide the images next to Testimonials, use the attribute ```show_thumbs=0``` for hiding the images, and ```show_thumbs=1``` for displaying the images.
 * To control the Order of the Testimonials with the Shortcode, use the attribute ```order='ASC'```.  To control the Order By parameter, use the attribute ```orderby='title'```.  Acceptable attributes for ```order``` are ```ASC``` and ```DESC```. Acceptable attributes for ```orderby``` are ```none```,```ID```,```author```,```title```,```name```,```date```,```modified```,```parent```, and ```rand```. 
-* To display the rating along with the testimonial, use the attribute ```show_rating```.  Possible values are ```show_rating=before```, for the rating to appear before the testimonial content, and ```show_rating=after```, for the rating to appear after the testimonial content.
+* To display the rating along with the testimonial, use the attribute ```show_rating```.  Possible values are ```show_rating=before```, for the rating to appear before the testimonial content, ```show_rating=after```, for the rating to appear after the testimonial content, and ```show_rating=stars```, for the rating to appear as stars with the Testimonial meta data.
+* To display the publication date of the testimonial, use the attribute ```show_date```.  Possible values are ```show_date=1```.
 
 ### Output a List of Testimonials ###
 * To output a list of All Testimonials, place the shortcode ```[testimonials]``` in the desired area of the Page or Post Content.  To display more than one testimonial, use the shortcode ```[testimonials count='3']```, where count is the number of testimonials you want displayed.  To display the title above the testimonial, use the shortcode ```[testimonials show_title="1"]```.  To use the Excerpt of a testimonial, add the attribute ```use_excerpt=1``` to your shortcode.  To output Testimonials in a specific Category, use the attribute ```category='the_category_slug'```.  To show or hide the images next to Testimonials, use the attribute ```show_thumbs=0``` for hiding the images, and ```show_thumbs=1``` for displaying the images.
 * To control the Order of the Testimonials with the Shortcode, use the attribute ```order='ASC'```.  To control the Order By parameter, use the attribute ```orderby='title'```.  Acceptable attributes for ```order``` are ```ASC``` and ```DESC```. Acceptable attributes for ```orderby``` are ```none```,```ID```,```author```,```title```,```name```,```date```,```modified```,```parent```, and ```rand```. 
-* To display the rating along with the testimonial, use the attribute ```show_rating```.  Possible values are ```show_rating=before```, for the rating to appear before the testimonial content, and ```show_rating=after```, for the rating to appear after the testimonial content.
+* To display the rating along with the testimonial, use the attribute ```show_rating```.  Possible values are ```show_rating=before```, for the rating to appear before the testimonial content, ```show_rating=after```, for the rating to appear after the testimonial content, and ```show_rating=stars```, for the rating to appear as stars with the Testimonial meta data.
 * To paginate the list of Testimonials, use the attribute ```paginate='1'```.  When paginated, to control the number of Testimonials shown per page use the attribute ```testimonials_per_page='5'``` (where 5 is the number of Testimonials displayed.)
+* To display the publication date of the testimonial, use the attribute ```show_date```.  Possible values are ```show_date=1```.
 
 ### Output a Testimonial in the Sidebar ###
 * To output a Testimonial in the Sidebar, use the Widgets section of your WordPress Theme, Accessible on the Appearance Menu in the WordPress Admin.  You can show more than one random testimonial by placing a number in the Count field.  You can show the Testimonial Title above the Testimonial by checking Show Testimonial Title Note: The Title Field on the Widget is displayed above the Widget, if your theme supports Widget Titles - this is different than the Testimonial Title.
@@ -112,6 +122,7 @@ You have a few things to pay attention to:
 * To display a pager below the slider, use the attribute ```pager='1'```.  On the Widget, check the box labeled Display Pager Icons.
 * To have the height of the slider automatically adjust to the height of it's content, set the attribute ```container='1'```.
 * To control the number of testimonials that appear per slide, use the attribue ```testimonials_per_slide='1'```.
+* To display the publication date of the testimonial, use the attribute ```show_date```.  Possible values are ```show_date=1```.
 
 ### Outputting a Testimonial Slider in the Sidebar ###
 * To output a Testimonial Cycle in the Sidebar, use the Widgets section of your WordPress Theme, Accessible on the Appearance Menu in the WordPress Admin.  You can how many testimonials are shown by placing a number in the Count field - make sure you have at least 2, if you want them to Cycle!  You can show the Testimonial Title above the Testimonial by checking Show Testimonial Title Note: The Title Field on the Widget is displayed above the Widget, if your theme supports Widget Titles - this is different than the Testimonial Title.  You can control the time between transitions using the Timer field - every 1000 equals 1 second.
@@ -124,8 +135,16 @@ You have a few things to pay attention to:
 * Captcha support is enabled with the installation of the [Really Simple Captcha plugin](https://wordpress.org/plugins/really-simple-captcha/ "Really Simple Captcha").
 * Front End Image Submission is enabled via a checkbox on the Submission Form Options tab.
 
+### Using Filters to Customize Output ###
+* We provide the following filters to developers for customizing output even further:
+```easy_t_random_testimonials_html``` -- random testimonials filter
+```easy_t_single_testimonial_html``` -- single testimonial filter
+```easy_t_testimonials_html``` -- all testimonials list filter
+```easy_t_testimonials_cyle_html``` -- testimonials cycle filter
+```easy_t_submission_form``` -- testimonial submission form
+
 ### Options ###
-* To control the destination of the "Read More" link, set the path in the Testimonials Read More Link field.
+* To control the destination of the "View More" link, set the path in the Testimonials View More Link field.
 * To display any Featured Images that you have attached to your Testimonials, check the box next to Show Testimonial Image.
 * To display any Testimonial Information above the content, check the box next to Show Testimonial Info Above Testimonial.
 * To add any Custom CSS, to further modify the output of the plugin, input the CSS in the textarea labeled Custom CSS.  You do not need to include the opening or closing <style> tags, treat it like you're inside a CSS file.
@@ -191,6 +210,48 @@ As a security precaution, our plugin only allows users to upload images of the f
 7. This is the Testimonial Cycle Widget.
 
 == Changelog ==
+
+= 1.17.5 =
+* Update: Fix incorrect default for custom single_testimonial shortcode.
+* Update: Change point that CSS is enqueued to improve compatibility with various caching plugins.
+
+= 1.17.4 =
+* Update: add option to control registered shortcodes to allow compatibility adjustments for various themes and plugins.
+* Update: adds Themes to shortcode generator.
+
+= 1.17.3 =
+* Fix: address issue where stars weren't showing appropriately to logged out users.
+
+= 1.17.2 =
+* Update: CSS tweaks.
+
+= 1.17.1 =
+* Update: minify new assets.
+
+= 1.17 =
+* Update: Adds 25 New Themes!
+* Update: Adds Show Publication Date and Show Star Ratings options to Shortcode Generator.
+* Fix: Addresses issue where Publication Date was output in an incorrect position when meta data was displayed below the Testimonial.
+
+= 1.16.1 =
+* Fix: Address broken images on Style and Theme Options Settings.
+
+= 1.16 =
+* Feature: adds ability to display testimonial publication date via shortcode.
+* Update: adds new shortcode options to shortcode generator.
+* Update: updates compatibility to WP 4.1
+
+= 1.15.2 =
+* Fix: hide newsletter signup form from Pro activated users.
+
+= 1.15.1 =
+* Fix: address compatibility issue with Tri.be Events Calendar.
+
+= 1.15 =
+* Feature: Adds ability to choose a specific theme via the shortcode.
+* Feature: Adds integration with Hello Testimonials.
+* Feature: Adds output filters for greater developer control over display formatting.
+* Fix: Various bug fixes.
 
 = 1.14 =
 * Feature: adds ability to use pagination with the list all testimonials shortcode.
@@ -388,4 +449,4 @@ As a security precaution, our plugin only allows users to upload images of the f
 
 == Upgrade Notice ==
 
-* 1.14: Update available!
+* 1.17.5: Update available!
